@@ -25,3 +25,7 @@
 - Be aware that the first browser access is necessary to install the Service Worker.
 - Beginning with the second browser access the rerouting should work.
 - `Update on reload` can be activated in `Chrome DevTools | Application | Service Workers` to reflect changes in `resource-proxy.config.js` on reload.
+
+## PoC implementation
+
+A HTML `<img>` tag requests an asset (Angular icon size 152x152). As soon as the Service Worker runs the request to this icon gets rerouted to a larger version of this asset (Angular icon size 512x512).
